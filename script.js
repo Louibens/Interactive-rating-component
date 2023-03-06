@@ -1,8 +1,20 @@
-let rating = document.getElementsByClassName('rating')
-let count = ""
+let rates = document.querySelectorAll('.rating');
+let givenRating = sessionStorage.getItem("userRating");
+let ratesClicked = false;
 
-rating.addEventListener('click', select);
 
-function select {
-    document.getElementsByClassName('rating').classList.add('selected')
-}
+rates.forEach((rate) => {
+    rate.addEventListener("click", () => {
+      ratesClicked = true;
+        sessionStorage.setItem("userRating", rate.innerHTML) ;
+        setRating()
+        rate.classList.add('selected')
+})
+  })
+
+  function setRating() {
+    document.getElementById("rated").innerHTML = givenRating;
+
+  }
+
+
