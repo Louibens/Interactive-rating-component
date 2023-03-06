@@ -27,7 +27,7 @@ body {
 #icon-container {
     height: 30px;
     width: 30px;
-    background-color: hsla(216, 12%, 8%, 0.8);
+    background-color: hsla(216, 12%, 54%, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -70,12 +70,18 @@ body {
 #rating-container div {
     height: 30px;
     width: 30px;
-    background-color: hsla(216, 12%, 8%, 0.8);
+    background-color: hsla(216, 12%, 54%, 0.1);;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: hsl(217, 12%, 63%);
+    font-size: 12px;
+}
+
+#rating-container div:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
 }
 
 button {
@@ -84,10 +90,25 @@ button {
     margin: 0 20px;
     background-color: hsl(25, 97%, 53%);
     border-radius: 20px;
+    font-family: Overpass, sans-serif; 
+    color:hsl(0, 0%, 100%);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+}
+
+.selected {
+    background-color: hsl(216, 12%, 54%);
+    color:hsl(0, 0%, 100%);
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
 
 #second-side {
