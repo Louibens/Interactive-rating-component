@@ -1,20 +1,22 @@
+
+
 let rates = document.querySelectorAll('.rating');
-let givenRating = sessionStorage.getItem("userRating");
-let ratesClicked = false;
-let submit = document.getElementById('submit')
+let submit = document.querySelector('button')
 
 rates.forEach((rate) => {
     rate.addEventListener("click", () => {
-      ratesClicked = true;
-        sessionStorage.setItem("userRating", rate.innerHTML) ;
+      document.getElementById("rated").innerHTML = rate.innerHTML;
+      rate.classList.add('selected')
+      
+    }
+    )}
+)
 
-        
-})
-  })
+console.log(submit)
+function submitRate() {
+document.getElementById('first-side').classList.add('hide');
+document.getElementById('second-side').classList.remove('hide')
+}
 
-function setRating() {
-    document.getElementById("rated").innerHTML = givenRating;
 
-  }
 
-submit.addEventListener('click', setRating)
